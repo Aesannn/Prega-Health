@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page - With Background Video Slider | Travel</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand"><h2>Prega Health</h2>
+        <h4>Preparing for Parenthood: A Holistic Approach to Pregnancy</h4></a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#" onclick="window.open('index.html')">Home</a>
+          <a href="#" onclick="window.open('about.html')">About Us</a>
+          <a href="#" onclick="window.open('gallery.html')">Gallery</a>
+          <a href="#" onclick="window.open('contact.html')">Contact Us</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="12.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Contact Us<br><span></span></h1>
+
+        <p>In a pregnancy website, it's important to emphasize the sensitivity and confidentiality<br>
+           of the information shared by the users. Therefore, it's essential to provide clear instructions <br>
+           on how to protect user privacy and what kind of information should not be shared via email or <br>
+           other communication channels.</p>
+
+        <p>Finally, the "Contact Us" page is also an excellent opportunity to reassure users that their inquiries<br>
+           will be addressed promptly and professionally. Including a brief statement about the website's commitment<br>
+           to providing excellent customer service can help users feel more confident about reaching out with their <br>
+           questions and concerns.</p>
+           <br><br>
+
+
+        <div class="contact">
+            <h2></h2>
+            <form action="submit-form.php" method="post">
+              <input type="text" name="name" placeholder="Your Name">
+              <input type="email" name="email" placeholder="Your Email">
+              <input type="text" name="subject" placeholder="Subject">
+              <textarea name="message" placeholder="Message"></textarea>
+              <button type="submit">Send</button>
+            </form><br>
+            <div class="contact-info">
+              <h2>Our Location</h2>
+              <h3>Hig 28, Maruti Villa</h3>
+              <h3>Aryapalli, Bhubaneshwar, Odisha</h3>
+              <h2>Phone Number</h2>
+              <h3>+91 8910750834</h3>
+              <h2>Email Address</h2>
+              <h3>sohomroy2017@gmail.com</h3><br>
+            </div>
+        </div>      
+      </div>
+
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+
+  
+    </section>
+
+    <script type="text/javascript">
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>

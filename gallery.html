@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page - With Background Video Slider | Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand"><h2>Prega Health</h2>
+        <h4>Preparing for Parenthood: A Holistic Approach to Pregnancy</h4></a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#" onclick="window.open('index.html')">Home</a>
+          <a href="#" onclick="window.open('about.html')">About Us</a>
+          <a href="#" onclick="window.open('gallery.html')">Gallery</a>
+          <a href="#" onclick="window.open('contact.html')">Contact Us</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="7.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="8.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="9.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="10.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="11.mp4" autoplay muted loop></video>
+    
+      <div class="content active">
+        <h1>Galleria<br><span></span></h1>
+
+        <p>A gallery section on a pregnancy website serves as a valuable resource for expectant parents, <br>
+            allowing them to access visual content related to the various stages of pregnancy and childbirth. <br>
+            The gallery may feature a range of media, including ultrasound images of the developing fetus, <br>
+            photographs and videos of labor and delivery, and educational content such as illustrations and <br>
+            diagrams detailing fetal growth and the birthing process. Such visual aids can help to elucidate <br>
+            and normalize the experiences of pregnancy and childbirth, while also providing a sense of community <br>
+            and support for expectant parents. It is imperative to ensure that all images and videos included in <br>
+            the gallery uphold standards of professionalism and respect for all types of pregnancies and birthing experiences.</p>
+      </div>
+
+      <div class="content">
+        <h1>Galleria<br><span></span></h1>
+          
+        <p>A gallery section on a pregnancy website serves as a valuable resource for expectant parents, <br>
+            allowing them to access visual content related to the various stages of pregnancy and childbirth. <br>
+            The gallery may feature a range of media, including ultrasound images of the developing fetus, <br>
+            photographs and videos of labor and delivery, and educational content such as illustrations and <br>
+            diagrams detailing fetal growth and the birthing process. Such visual aids can help to elucidate <br>
+            and normalize the experiences of pregnancy and childbirth, while also providing a sense of community <br>
+            and support for expectant parents. It is imperative to ensure that all images and videos included in <br>
+            the gallery uphold standards of professionalism and respect for all types of pregnancies and birthing experiences.</p>
+        
+      </div>
+      <div class="content">
+        <h1>Galleria<br><span></span></h1>
+        <p>A gallery section on a pregnancy website serves as a valuable resource for expectant parents, <br>
+            allowing them to access visual content related to the various stages of pregnancy and childbirth. <br>
+            The gallery may feature a range of media, including ultrasound images of the developing fetus, <br>
+            photographs and videos of labor and delivery, and educational content such as illustrations and <br>
+            diagrams detailing fetal growth and the birthing process. Such visual aids can help to elucidate <br>
+            and normalize the experiences of pregnancy and childbirth, while also providing a sense of community <br>
+            and support for expectant parents. It is imperative to ensure that all images and videos included in <br>
+            the gallery uphold standards of professionalism and respect for all types of pregnancies and birthing experiences.</p>
+      
+      </div>
+      <div class="content">
+        <h1>Galleria<br><span></span></h1>
+        <p>A gallery section on a pregnancy website serves as a valuable resource for expectant parents, <br>
+            allowing them to access visual content related to the various stages of pregnancy and childbirth. <br>
+            The gallery may feature a range of media, including ultrasound images of the developing fetus, <br>
+            photographs and videos of labor and delivery, and educational content such as illustrations and <br>
+            diagrams detailing fetal growth and the birthing process. Such visual aids can help to elucidate <br>
+            and normalize the experiences of pregnancy and childbirth, while also providing a sense of community <br>
+            and support for expectant parents. It is imperative to ensure that all images and videos included in <br>
+            the gallery uphold standards of professionalism and respect for all types of pregnancies and birthing experiences.</p>
+      
+      </div>
+      <div class="content">
+        <h1>Galleria<br><span></span></h1>
+        <p>A gallery section on a pregnancy website serves as a valuable resource for expectant parents, <br>
+            allowing them to access visual content related to the various stages of pregnancy and childbirth. <br>
+            The gallery may feature a range of media, including ultrasound images of the developing fetus, <br>
+            photographs and videos of labor and delivery, and educational content such as illustrations and <br>
+            diagrams detailing fetal growth and the birthing process. Such visual aids can help to elucidate <br>
+            and normalize the experiences of pregnancy and childbirth, while also providing a sense of community <br>
+            and support for expectant parents. It is imperative to ensure that all images and videos included in <br>
+            the gallery uphold standards of professionalism and respect for all types of pregnancies and birthing experiences.</p>
+          <a href="#" onclick="window.open('about.html')">About Us</a>
+
+
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn active"></div>
+        <div class="nav-btn active"></div>
+        <div class="nav-btn active"></div>
+        <div class="nav-btn active"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>

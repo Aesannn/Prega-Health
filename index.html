@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page - With Background Video Slider | Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand"><h2>Prega Health</h2>
+        <h4>Preparing for Parenthood: A Holistic Approach to Pregnancy</h4></a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#" onclick="window.open('index.html')">Home</a>
+          <a href="#" onclick="window.open('about.html')">About Us</a>
+          <a href="#" onclick="window.open('gallery.html')">Gallery</a>
+          <a href="#" onclick="window.open('contact.html')">Contact Us</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Getting Pregnant<br><span></span></h1>
+
+        <p>Welcome to pregnancy! This is the start of an incredible journey. <br>
+          To help you along, we offer info on pregnancy aches and pains, weight <br>
+          gain and nutrition, what's safe during pregnancy and what's not, pregnancy <br>
+          stages, labor and delivery, and more</p>
+
+
+        <p>
+          You need to know, from how long it usually takes to the right time to <br>
+          have sex and how to know when you're ovulating. <br>
+          You can also read up on dealing with <br>
+          fertility problems and the early signs of pregnancy.</p>
+    
+      </div>
+      <div class="content">
+        <h1>Discover Our Pregnancy Studies<br><span></span></h1>
+          
+        <p>Our observational studies examine the effects of medications and <br> 
+          health conditions during pregnancy. Your participation can help <br>
+          improve product safety information and help parents-to-be and <br>
+          health providers better navigate treatment decisions with <br>
+          more information on benefits or risks.</p>
+        
+      </div>
+      <div class="content">
+        <h1>COVID-19 Updates<br><span></span></h1>
+        <p>Our MotherToBaby experts have issued updates to our educational <br>
+          resources on COVID-19 during pregnancy and breastfeeding. <br>
+          COVID-19 has had a significant impact on pregnancy, <br>
+          increasing the risk of hospitalization, preterm birth, <br>
+          and transmission to the baby. Limited access to prenatal <br>
+          care and potential mental health impacts are also concerns. <br>
+          Preventive measures and discussions with healthcare providers <br>
+          can help mitigate these risks.</p>
+      
+      </div>
+      <div class="content">
+        <h1>Go for weekly check-ups<br><span></span></h1>
+        <p>It's very normal to feel more anxious than usual during pregnancy. <br>
+          Worry and fear are natural responses to big changes, including expecting <br>
+          a child. Whether this is your first baby or you're adding to your family, <br>
+          your life is about to change dramatically in ways you can't control. </p>
+
+        <p>An anxiety disorder during pregnancy, however, can interfere with your <br>
+          ability to live your day-to-day life. Especially during this time, it <br>
+          can be difficult to distinguish between normal worry and persistent anxiety.
+        </p>
+      
+      </div>
+      <div class="content">
+        <h1>Inclusion for All<br><span></span></h1>
+        <p>Pregamate welcomes all individuals and families at all stages of their pregnancy <br>
+          and lactation journey and recognizes that not all people identify as “men” or “women.” <br>
+          We strive to use gender-neutral language when talking about pregnancy and lactation. <br>
+          By using inclusive and non-gendered terminology, we strive to enable all families to <br>
+          be empowered to reach their personal and familial pregnancy and lactation goals.</p>
+
+        <p>While our name still contains a reference to “mothers”, we have updated our website <br>
+          and resources to use more inclusive terms where possible and where doing so allows <br>
+          the overall message to remain clear to the general population. We welcome feedback <br>
+          on any of the terms used and acknowledge that our understanding of these terms will <br>
+          evolve over time and is always better informed by open dialogue.</p>
+          <a href="#" onclick="window.open('about.html')">About Us</a>
+
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn active"></div>
+        <div class="nav-btn active"></div>
+        <div class="nav-btn active"></div>
+        <div class="nav-btn active"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
